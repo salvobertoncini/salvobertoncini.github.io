@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 title:              salvobertoncini
 email:              info@salvobertoncini.com
 description:        Blog Salvobertoncini
@@ -20,3 +21,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+=======
+theme: jekyll-theme-cayman
+>>>>>>> 070eef16ea33f3bd8aa2639f5836b6390d38bc02
