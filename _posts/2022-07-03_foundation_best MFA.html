@@ -1,0 +1,101 @@
+---
+layout: post
+title: "Let's talk about how you 'insecurely' manage credentials (part 2)"
+subtitle: "Why you should use Multi Factor Authentication and which one is better"
+date: 2022-07-03 10:37:00 -0400
+background: '/img/posts/credentials_lock.jpg'
+---
+
+<p>As discussed in the previous <a href="salvobertoncini.com/2022/06/11/foundations_credentials-management.html">post</a> related to basic credentials management, Multi Factor Authentication (MFA) is crucial to securely manage your password. This led to a counscious management of your credentials, and a relatively bit of further secureness in our pockets.</p>
+
+<p>As we also learned, some MFA methods are considered more secure than some others (did you say SMS?). Why you should not rely on these methods? And which is the best?</p>
+
+<p>Let's shine the light on MFA methods.</p>
+
+<ol data-toc="div.container" data-toc-headings="h2.section-heading"><h3>Table of Contents</h3></ol>
+
+<h2 class="section-heading">Attacks to SMS</h2>
+
+<p>Plenty of attacks were accomplished during the last few years, which main driver was the use of <b>social engineering</b><sup><a href="#ref">[1]</a></sup> techniques. 
+
+As an example, the founder and CEO of Facebook, Mark Zuckerberg, was victim of an attack<sup><a href="#ref">[2]</a></sup>  related to his Twitter and Pinterest passwords. The attack was generally speaking a guessing of the password using information provided by Zuckerberg in his LinkedIn account.</p>
+
+<p>Especially for SMS login, social engineering could be used to approach to your mobile phone.
+
+In this article<sup><a href="#ref">[3]</a></sup> it's explained how Telegram accounts were hacked using SMS protocol "bugs". 
+In fact, not only SMS are easy to be intercepted for your telecom provider, but also devices such as IMSI-catchers<sup><a href="#ref">[4]</a></sup> can be used for intercepting messages.</p>
+
+<p>Furthermore, another attack based on SIM is SIM swap<sup><a href="#ref">[5]</a></sup>. In fact, if an attacker gained your personal data (maybe via social engineering), impersonating the victim he's able to port the victim's phone number to the fraudster SIM.
+
+The victim will only realize the attack when the connection to the network will be lost - AKA when it's too late.</p>
+
+<p>Considering that SMSs are easy to be "sniffed", if this is not the only MFA methods you could select, why you should rely on it?</p>
+
+<h2 class="section-heading">Which MFA options do we have and which is better</h2>
+
+<h3>Authenticator apps</h3>
+<p>Authenticator apps are for sure a reliable starter solution.</p>
+
+<p>Those apps work using the Time-based One Time Password (TOTP), which is a code generated thru an algorithm and which is not dependent on any kind of connection.</p>
+
+<p>Unfortunately, TOTP are not inviolable. In fact, some phishing website can be developed to steal MFA credentials.</p>
+
+<p>Moreover, if you use MFA apps such as Google Authenticator it might be difficult to recover your TOTP in case you lose your phone. For this reason, some Authenticator (e.g. <a href="https://authy.com">Authy</a>) uses a password to recover your passwords in case of backup.</p>
+
+<h3>Push notification apps</h3>
+<p>A notable MFA method is for sure Push notification. This method consists of a notification sent to your mobile phone providing you details about the login. The user then could accept (or deny) the login request simply tapping on the phone.</p>
+
+<p>Even if this might be considered an upgrade of the previous MFA methods, 2 disadvantages may arise. 
+
+First of all, you need a connection to a network to receive the push notification on your phone, which in my opinion means a downgrade compared to the TOTP.
+
+Moreover, a malware could be injected in your phone simulating a push notification, which could result in an exploit of your phone.</p>
+
+<p>Lastly, instead of using a single TOTP application, push are different, and strictly depends on the various applications you adopt.</p>
+
+<h3>Hardware-based OTP</h3>
+<p>To use a physical Authenticator device, such as <a href="https://www.yubico.com/products/">Yubikey</a>, could seem the best option for MFA.</p>
+
+<p>This might be true, but as usual this lead to some considerations.</p>
+
+<p>First of all, you need to buy a piece of hardware, which could be expensive (some advanced models cost more than 100$).
+
+Moreover, if you lose your key you could have issues to backup your codes and to restore your "business as usual" activities.</p>
+
+<p>Lastly, you should use a key which is valid for all your devices (e.g., your computer and your phone), which could be clunky.</p>
+
+<h2 class="section-heading">Which MFA is the best?</h2>
+<p>Unfortunately, the answer is not so simple. Generally, there are no best MFA solutions, but solutions which best fit for you. Thus, it depends.</p>
+
+<p>A free and reliable solution is for sure the TOTP, preferring apps that let you sync your accounts and have a backup methods</p>
+
+<p>Probably, an hardware-based OTP, for practical and security reason, would be the best option available, if you can build a reliable backup system.</p>
+
+<p>In any case, a common understanding is that you should avoid SMS as a MFA method, wherever possible.</p>
+
+<h2 class="section-heading">Conclusion</h2>
+<p>We shed some light on MFA methods available on the market, with pros and cons for each method, and tried to understand which one could best fit for you.</p>
+
+<p>Again, I encourage the use of MFA method combined with a password manager to improve your security posture.</p>
+
+<p>The more you use this combination of notions, the more secure you might feel.</p> 
+
+<h2 class="section-heading" id="ref">References</h2>
+<ol>
+	<li>
+		<cite>[1] <a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">Social engineering (security)</a></cite>	
+	</li>
+	<li>
+		<cite>[2] <a href="https://www.joe.ie/tech/mark-zuckerberg-got-hacked-and-his-password-was-embarrassingly-simple-548341">SMark Zuckerberg was hacked and his password was embarrassingly simple</a></cite>
+	</li>
+	<li>
+		<cite>[3] <a href="https://www.fredericjacobs.com/blog/2016/01/14/sms-login/">On SMS logins: an example from Telegram in Iran</a></cite>
+	</li>
+	<li>
+		<cite>[4] <a href="https://en.wikipedia.org/wiki/IMSI-catcher">IMSI-catcher</a></cite>
+	</li>
+	<li>
+		<cite>[5] <a href="https://en.wikipedia.org/wiki/SIM_swap_scam">SIM swap scam</a></cite>
+	</li>
+</ol>
+<p>Photo by <a href="https://unsplash.com/@flyd2069">FLY:D</a> on <a href="https://unsplash.com/">Unsplash</a>.</p>
