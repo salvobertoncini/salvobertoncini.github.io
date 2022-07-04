@@ -5,6 +5,7 @@ author:             Salvo Bertoncini
 baseurl:            ""
 url:                "www.salvobertoncini.com"
 timezone:           Europe/Rome
+future:             TRUE
 
 # Social Profiles
 twitter_username:   salvobertoncini
