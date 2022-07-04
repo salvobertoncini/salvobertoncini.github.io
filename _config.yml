@@ -4,6 +4,7 @@ description:        cybersec and lots of more fun
 author:             Salvo Bertoncini
 baseurl:            ""
 url:                "www.salvobertoncini.com"
+timezone:           Europe/Rome
 
 # Social Profiles
 twitter_username:   salvobertoncini
