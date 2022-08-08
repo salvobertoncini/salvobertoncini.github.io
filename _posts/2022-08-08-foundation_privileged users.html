@@ -1,0 +1,103 @@
+---
+layout: post
+title: "We need to talk about Privileged Users"
+subtitle: "One of the most important (yet underrated) entry point for attackers"
+date: 2022-08-08 17:20:00
+background: '/img/posts/attacker_from_his_room.jpg'
+---
+
+<p>Privileged users are everywhere. Although you are not able to notice them, in an organization for each personal account there are from 3 to 4 Privileged Users.</p>
+
+<p>Due to the large attack surface, if not properly managed, Privileged Users can lead to several attacks (almost 80%<sup><a href="#ref">[1]</a></sup> of the last 2-years attacks were identity-related). But what is a Privileged User? And how can we safely manage them?</p>
+
+<p>Let's shine the light on Privileged Users.</p>
+
+<ol data-toc="div.container" data-toc-headings="h2.section-heading"><h3>Table of Contents</h3></ol>
+
+<h2 class="section-heading">What a Privileged User is</h2>
+
+<p>As per NIST<sup><a href="#ref">[2]</a></sup>, a Privileged User is a user that is authorized (and therefore, trusted) to perform security-relevant functions that ordinary users are not authorized to perform.</p>
+
+<p>They can be associated with human users (e.g., admin, root, super user) as well as non-human users (e.g., applications and machine identities).</p>
+
+<p>Some examples of Privileged credentials accessed by humans are:
+	<ol>
+		<li>
+			Super user accounts
+		</li>
+		<li>
+			Domain administrative account
+		</li>
+		<li>
+			Local administrative account
+		</li>
+		<li>
+			SSH key
+		</li>
+		<li>
+			Emergency account
+		</li>
+		<li>
+			Privileged business user
+		</li>
+	</ol>
+</p>
+
+<p>Some examples of Privileged credentials accessed by non-humans are:
+	<ol>
+		<li>
+			Application account
+		</li>
+		<li>
+			Service account
+		</li>
+		<li>
+			SSH key
+		</li>
+		<li>
+			Secret
+		</li>
+	</ol>
+</p>
+
+<p>Other example of Privileged accounts are:
+	<ol>
+		<li>Root accounts</li>
+		<li>Wi-Fi accounts</li>
+		<li>Firewall accounts</li>
+		<li>Network equipment accounts</li>
+		<li>Hardware accounts</li>
+	</ol>
+</p>
+
+<p>As mentioned, Privileged accounts are everywhere. Organizations need to safely manage an always-growing number of them, beneath systems, applications, infrastructures, IoT devices, in cloud, on premise and hybrid environments.</p>
+
+<p>For this reason, attacks can be perpetrated from inside and outside the organization. Exploiting credentials and gaining the access to the organization network, the attackers can move laterally or vertically, and even exfiltrate date, resulting in the interruption of the business. This pattern can be repeated endlessly.</p>
+
+<h2 class="section-heading">How to manage Privileged Users</h2>
+
+<p>First of all organizations need to safely store and manage the Privileged Credentials. They are usually stored with different encryption layers, and cannot be retrieved or accessed directly from human or non-human entities.</p>
+
+<p>In fact, thanks to modern Privileged Access Management solutions, credentials can be retrieved only when requested via calls (e.g., via API), and only if the request is generated from a trusted source.</p>
+
+<p>For security reason, a best practice is to periodically rotate credentials.</p>
+
+<p>Moreover, sessions in which Privileged Accounts are involved have to be recorded. This means that every action performed by a Privileged Account is logged and can be audited at any time. Sessions are often isolated, which means that the end users never connect directly to the target systems.</p>
+
+<p>Of course, MFA and SSO are a must also in this context.</p>
+
+<h2 class="section-heading">Conclusion</h2>
+<p>We shed some light on the different Privileged Accounts you could face in an organization, and some features a robust solution should offer.</p>
+
+<p>Those accounts are crucial, and engaged in almost every attack to an organization. For this reason, managing those accounts need to be a priority for each organization.</p>
+
+<h2 class="section-heading" id="ref">References</h2>
+<ol>
+	<li>
+		<cite>[1] <a href="https://assets.beyondtrust.com/assets/documents/State-of-Identity-Survey-Report-Final.pdf?_gl=1*2xolq9*_up*MQ..*_ga*MTE0MDExNDgxMi4xNjU5OTczMjE4*_ga_5W4QD38R5C*MTY1OTk3MzIxOC4xLjAuMTY1OTk3MzIxOC4w">The State of Identity: How Security Teams are Addressing Risk, 2019</a></cite>	
+	</li>
+	<li>
+		<cite>[2] <a href="https://doi.org/10.6028/NIST.SP.800-171r2">NIST SP 800-172</a></cite>
+	</li>
+</ol>
+<p>Photo by <a href="https://unsplash.com/@jefflssantos">Jefferson Santos</a> on <a href="https://unsplash.com/">Unsplash</a>.</p>
