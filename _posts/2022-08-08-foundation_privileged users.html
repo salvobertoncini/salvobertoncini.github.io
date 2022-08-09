@@ -8,7 +8,7 @@ background: '/img/posts/attacker_from_his_room.jpg'
 
 <p>Privileged users are everywhere. Although you are not able to notice them, in an organization for each personal account there are from 3 to 4 Privileged Users.</p>
 
-<p>Due to the large attack surface, if not properly managed, Privileged Users can lead to several attacks (almost 80%<sup><a href="#ref">[1]</a></sup> of the last 2-years attacks were identity-related). But what is a Privileged User? And how can we safely manage them?</p>
+<p>Due to the large attack surface, if not properly managed, Privileged Users can lead to several attacks (almost 80%<sup><a href="#ref">[1]</a></sup> of the last 2-years attacks were identity-related, and almost 80% of the attacks generally involve Privileged Accounts<sup><a href="#ref">[2]</a></sup>). But what is a Privileged User? And how can we safely manage them?</p>
 
 <p>Let's shine the light on Privileged Users.</p>
 
@@ -16,11 +16,11 @@ background: '/img/posts/attacker_from_his_room.jpg'
 
 <h2 class="section-heading">What a Privileged User is</h2>
 
-<p>As per NIST<sup><a href="#ref">[2]</a></sup>, a Privileged User is a user that is authorized (and therefore, trusted) to perform security-relevant functions that ordinary users are not authorized to perform.</p>
+<p>As per NIST<sup><a href="#ref">[3]</a></sup>, a Privileged User is a user that is authorized (and therefore, trusted) to perform security-relevant functions that ordinary users are not authorized to perform.</p>
 
 <p>They can be associated with human users (e.g., admin, root, super user) as well as non-human users (e.g., applications and machine identities).</p>
 
-<p>Some examples of Privileged credentials accessed by humans are:
+<p>Some examples of Privileged accounts accessed by humans are:
 	<ol>
 		<li>
 			Super user accounts
@@ -43,7 +43,7 @@ background: '/img/posts/attacker_from_his_room.jpg'
 	</ol>
 </p>
 
-<p>Some examples of Privileged credentials accessed by non-humans are:
+<p>Some examples of Privileged accounts accessed by non-humans are:
 	<ol>
 		<li>
 			Application account
@@ -74,7 +74,7 @@ background: '/img/posts/attacker_from_his_room.jpg'
 
 <p>For this reason, attacks can be perpetrated from inside and outside the organization. Exploiting credentials and gaining the access to the organization network, the attackers can move laterally or vertically, and even exfiltrate date, resulting in the interruption of the business. This pattern can be repeated endlessly.</p>
 
-<h2 class="section-heading">How to manage Privileged Users</h2>
+<h2 class="section-heading">How to manage Privileged Users and Accounts</h2>
 
 <p>First of all organizations need to safely store and manage the Privileged Credentials. They are usually stored with different encryption layers, and cannot be retrieved or accessed directly from human or non-human entities.</p>
 
@@ -97,7 +97,10 @@ background: '/img/posts/attacker_from_his_room.jpg'
 		<cite>[1] <a href="https://assets.beyondtrust.com/assets/documents/State-of-Identity-Survey-Report-Final.pdf?_gl=1*2xolq9*_up*MQ..*_ga*MTE0MDExNDgxMi4xNjU5OTczMjE4*_ga_5W4QD38R5C*MTY1OTk3MzIxOC4xLjAuMTY1OTk3MzIxOC4w">The State of Identity: How Security Teams are Addressing Risk, 2019</a></cite>	
 	</li>
 	<li>
-		<cite>[2] <a href="https://doi.org/10.6028/NIST.SP.800-171r2">NIST SP 800-172</a></cite>
+		<cite>[2] The Forrester Wave™: Privileged Identity Management (PIM), Q3 2018</cite>
+	</li>
+	<li>
+		<cite>[3] <a href="https://doi.org/10.6028/NIST.SP.800-171r2">NIST SP 800-172</a></cite>
 	</li>
 </ol>
 <p>Photo by <a href="https://unsplash.com/@jefflssantos">Jefferson Santos</a> on <a href="https://unsplash.com/">Unsplash</a>.</p>
